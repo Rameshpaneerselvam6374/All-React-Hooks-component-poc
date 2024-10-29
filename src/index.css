@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.counter{
+  background-color: #888;
+  margin: auto;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+}
+.h1{
+  color: #fd6;
+}
+.counter h1{
+  color: rgb(71, 65, 71);
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.counter p{
+  color: #fd6;
+}
+.counter button{
+  color: black;
+  background-color: blue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.counter button:hover{
+  background-color: #ddd;
+}
+
+.Router {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.box {
+  border: 3px solid;
+  padding: 25px;
+}

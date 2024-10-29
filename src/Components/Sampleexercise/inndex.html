@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Using Local Storage in Javascript</h1>
+        <form  id="registrationForm" >
+
+            <label for="fullName">Full Name:
+            </label>
+            <input type="text" id="fullName" class="fullName" required>
+            <label for="email">email:</label>
+            <input type="text" id="email" class="email" required>
+            <label for="password">Password:</label>
+            <input type="password" class="password" id="password" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event){
+            event.preventDefault();
+
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const formData = {
+                fullName:fullName,
+                email:email,
+                password:password
+            }
+            saveFormData(formData);
+        })
+
+        function saveFormData(formData) {
+            const storedFormData = JSON.parse(localstorage.getItem('formData')) || [];
+            storedFormData.push(formData);
+
+            localStorage.setItem('formData', JSON.stringify(storedFormData));
+        }
+    </script>
+</body>
+</html>

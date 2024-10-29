@@ -1,0 +1,106 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form use Edit and Submit Function</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+<body >
+    <div name="headding"><h1>Student Details</h1></div>
+    <div name="div">
+    <form name="form">
+        <table name="table">
+           <tr> <td><label for="name">Name:</label></td>
+            <td><input type="text" id="name"  class = "name placeholder="Enter the Text" required></td></tr>
+            <tr><td><label for="age">Age:</label></td>
+                <td><input type="text" id="age" name="age" placeholder="Enter the age" required></td></tr>
+                <tr>
+                    <td><label for="male">Gender:</label></td>
+                    <td><input type="radio" name="male">male <input type="radio" name="male">female</td>
+                </tr >
+                <tr><td><label for="course">Courses</label></td><td>
+                    <select class="course">
+                        <option> Java </option>
+                        <option>Java Script</option>
+                        <option>HTML</option>
+                        <option>Css</option>
+                    </section></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><input type="text" required  class="address" placeholder="Enter your Address"></td>
+                </tr>
+                <tr>
+                    <td><label for="number">Phone No:</label></td>
+                    <td><input type="number" class="number" required placeholder=" Enter your Number"></td>
+                </tr>
+                <tr>
+                    <td></td><td><button onclick="clickCounter()" type="button">Click me!</button></td>
+                </tr>
+                <p></p>
+                <div id="result"></div>
+        </table>
+    </form></div>
+    <script src="LocalStorage.jsx">
+        const nameText = document.querrySelector(".name");
+        const ageText = document.querrySelector(".age");
+        const maleText = document.querrySelector(".male");
+        const addressText = document.querrySelector(".address");
+        const numberText = document.querrySelector(".number");
+
+    </script>
+    
+</body>
+</html> 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form id="registrationForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Register</button>
+</form>
+
+
+JavaScript code for storing form data 
+
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+event.preventDefault();
+
+const fullName = document.getElementById('fullName').value;
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+
+const formData = {
+    fullName: fullName,
+    email: email,
+    password: password
+};
+
+saveFormData(formData);
+});
+
+function saveFormData(formData) {
+const storedFormData = JSON.parse(localStorage.getItem('formData')) || [];
+
+storedFormData.push(formData);
+
+localStorage.setItem('formData', JSON.stringify(storedFormData));
+}</script>
+</body>
+</html> -->
